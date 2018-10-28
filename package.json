@@ -1,0 +1,45 @@
+{
+    "name": "example-javascript-tips-pack",
+    "displayName": "Example Javascript Tips Pack",
+    "description": "A description of the Example Javascript Tips Pack",
+    "version": "1.0.0",
+    "publisher": "your-publishers-name-goes-here",
+    "repository": {
+        "url": "https://github.com/xmile1/vscode-tips-pack"
+    },
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "node ./node_modules/vscode/bin/test"
+    },
+    "tips": {
+        "javascript": [
+            {
+                "text": "The == (or !=) operator performs an automatic type conversion if needed. The === (or !==) operator will not perform any conversion. It compares the value and the type, which could be considered faster than ==",
+                "more": "https://modernweb.com/45-useful-javascript-tips-tricks-and-best-practices/"
+            },
+            {
+                "text": "Don’t use delete to remove an item from array, Use splice instead of using delete to delete an item from an array. Using delete replaces the item with undefined instead of the removing it from the array.",
+                "more": "https://modernweb.com/45-useful-javascript-tips-tricks-and-best-practices/"
+            }
+        ],
+        "es6": [
+            {
+                "text": "We can quickly copy an array using the spread operator ` let copiedList = [...list]`",
+                "more": "http://www.benmvp.com/learning-es6-12-tricks-for-es6-fun/#5-copying-an-array"
+            },
+            {
+                "text": "There are times when you want to remove unwanted properties — maybe because they contain sensitive info or are just too big. Instead of iterating over the whole object to removing them, we can simply extract such props to variables and keep the useful ones in the *rest* parameter let {_internal, tooBig, ...cleanObject} = {el1: '1', _internal:'secret', tooBig:{}, el2: '2', el3: '3'};",
+                "more": "https://medium.freecodecamp.org/check-out-these-useful-ecmascript-2015-es6-tips-and-tricks-6db105590377"
+            }
+        ]
+    },
+    "devDependencies": {
+        "vscode": "^1.1.6"
+    }
+}
